@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace DBTest.ccba.BA
 {
@@ -17,6 +18,8 @@ namespace DBTest.ccba.BA
         public FrmT_BA_Annual_Leave()
         {
             InitializeComponent();
+            dbHelper.DbType = DbTypes.MsSQL;
+            dbHelper.ConnString = ConfigurationManager.AppSettings["ConnString3"];//
         }
 
         #region 初始化年假

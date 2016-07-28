@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using DBTest.TSAutomation;
 
 namespace DBTest
 {
@@ -16,13 +17,15 @@ namespace DBTest
         [STAThread]
         static void Main()
         {
-            string attDbPath = ConfigurationManager.AppSettings["ConnString2"];
-            DapperHelper dbHelper = DapperHelper.getInstance();
-            dbHelper.ConnString = attDbPath;
+            //string attDbPath = ConfigurationManager.AppSettings["ConnString_sqlite"];//ConnString3
+            //DapperHelper dbHelper = DapperHelper.getInstance();
+            //dbHelper.ConnString = attDbPath;
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmT_BA_Annual_Leave());//Form1
+            //Application.Run(new FrmT_BA_Annual_Leave());//Form1
+            Application.Run(new FrmCoordinate());//Form1
+            
 
            
         }
