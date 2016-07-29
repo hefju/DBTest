@@ -16,7 +16,7 @@ namespace DBTest
             foreach (var col in splits)
             {
                 if (col != "")
-                    cols.Add(col);
+                    cols.Add(col.Trim());
             }
            // Dictionary<string,string>=new 
             
