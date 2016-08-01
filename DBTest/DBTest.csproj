@@ -80,6 +80,12 @@
     <Compile Include="Fscb\FrmGQM.Designer.cs">
       <DependentUpon>FrmGQM.cs</DependentUpon>
     </Compile>
+    <Compile Include="HB\FrmScrapCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HB\FrmScrapCar.Designer.cs">
+      <DependentUpon>FrmScrapCar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\fscb\GQM.cs" />
     <Compile Include="Model\TS\Coordinate.cs" />
     <Compile Include="Model\T_BA_Annual_Leave.cs" />
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Fscb\FrmGQM.resx">
       <DependentUpon>FrmGQM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HB\FrmScrapCar.resx">
+      <DependentUpon>FrmScrapCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

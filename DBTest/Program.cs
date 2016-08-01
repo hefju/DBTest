@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using DBTest.TSAutomation;
 using DBTest.Fscb;
+using DBTest.HB;
 
 namespace DBTest
 {
@@ -26,7 +27,9 @@ namespace DBTest
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FrmT_BA_Annual_Leave());//Form1
            // Application.Run(new FrmCoordinate());//Form1 FrmGQM
-            Application.Run(new FrmGQM()); 
+           // Application.Run(new FrmGQM()); 
+            Application.Run(new FrmScrapCar()); 
+            
 
            
         }
