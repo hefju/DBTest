@@ -138,7 +138,8 @@ namespace DBTest.ccba.BA
         private Dictionary<int, int> Annual_Use = new Dictionary<int, int>();//EmpID,本月使用的年假
         private void button3_Click(object sender, EventArgs e)
         {   
-            var date = new DateTime(2016, 6, 1);
+         //   var date = new DateTime(2016, 6, 1);
+            var date = new DateTime(int.Parse(txtYear.Text),int.Parse(txtMonth.Text),1);
             var sql = string.Format("sp_BA_GetYearLeave_T_BA_Duty {0},{1},{2}",date.Year,date.Month,1);
             var list = dbHelper.GetList<T_BA_Duty>(sql);
             CalcUse(list);
@@ -198,8 +199,8 @@ namespace DBTest.ccba.BA
         //读取上月年假
         private void button4_Click(object sender, EventArgs e)
         {
-           
-            var date = new DateTime(2016, 6, 1);
+
+            var date = new DateTime(int.Parse(txtYear.Text), int.Parse(txtMonth.Text), 1);// var date = new DateTime(2016, 6, 1);
             date = date.AddMonths(-1);
             var sql =string.Format( "SELECT  * FROM T_BA_Annual_Leave where 年={0} and 月={1} ",date.Year,date.Month);
            // lastMonth.Clear();
@@ -214,7 +215,7 @@ namespace DBTest.ccba.BA
         //生成下月年假
         private void button5_Click(object sender, EventArgs e)
         {
-            var date = new DateTime(2016, 6, 1);
+            var date = new DateTime(int.Parse(txtYear.Text), int.Parse(txtMonth.Text), 1); //var date = new DateTime(2016, 6, 1);
             //1.获取人员名单
             var sql = "SELECT  ID,姓名,入职时间,在职,年假情况 FROM T_BA_Employee where statu>-1 ";
             var Emplist = dbHelper.GetList<T_BA_Employee>(sql);
@@ -288,6 +289,16 @@ namespace DBTest.ccba.BA
         private void FrmT_BA_Annual_Leave_Load(object sender, EventArgs e)
         {
             lblInfo.Text = "注意:当前连接是:"+dbHelper.ConnString;
+            SetTime();
+
+        }
+
+        private void SetTime()
+        {
+            var time = DateTime.Now.AddMonths(-1);
+            txtYear.Text = time.Year.ToString();
+            txtMonth.Text = time.Month.ToString();
+
         }
 
 

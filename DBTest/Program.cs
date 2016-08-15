@@ -25,10 +25,11 @@ namespace DBTest
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FrmT_BA_Annual_Leave());//Form1
+          Application.Run(new FrmT_BA_Annual_Leave());//Form1
            // Application.Run(new FrmCoordinate());//Form1 FrmGQM
            // Application.Run(new FrmGQM()); 
-            Application.Run(new FrmScrapCar()); 
+           // Application.Run(new FrmScrapCar());
+            //  Application.Run(new FrmT_CD_EXECNode()); 
             
 
            

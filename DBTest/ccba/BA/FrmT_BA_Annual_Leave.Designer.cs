@@ -35,6 +35,10 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtYear = new System.Windows.Forms.TextBox();
+            this.txtMonth = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,11 +116,47 @@
             this.lblInfo.TabIndex = 9;
             this.lblInfo.Text = "label1";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(772, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(17, 12);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "年";
+            // 
+            // txtYear
+            // 
+            this.txtYear.Location = new System.Drawing.Point(796, 11);
+            this.txtYear.Name = "txtYear";
+            this.txtYear.Size = new System.Drawing.Size(54, 21);
+            this.txtYear.TabIndex = 11;
+            // 
+            // txtMonth
+            // 
+            this.txtMonth.Location = new System.Drawing.Point(882, 12);
+            this.txtMonth.Name = "txtMonth";
+            this.txtMonth.Size = new System.Drawing.Size(54, 21);
+            this.txtMonth.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(856, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(17, 12);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "月";
+            // 
             // FrmT_BA_Annual_Leave
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 561);
+            this.Controls.Add(this.txtMonth);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtYear);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -143,5 +183,9 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtYear;
+        private System.Windows.Forms.TextBox txtMonth;
+        private System.Windows.Forms.Label label2;
     }
 }
